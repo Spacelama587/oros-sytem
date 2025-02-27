@@ -2,7 +2,6 @@ import FeaturesGrid from '@/components/FeaturesGrid';
 import ModernHero from '@/components/ModernHero';
 import Navbar from '@/components/Navbar';
 import OrosiuriSystemSection from '@/components/OrosiuriSystemSection';
-import UltraModernSection from '@/components/UltraModernSection';
 import VideoSection from '@/components/VideoSection';
 
 export default function Home() {
