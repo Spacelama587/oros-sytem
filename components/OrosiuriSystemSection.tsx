@@ -6,7 +6,7 @@ import Lenis from 'lenis';
 import { TrendingUp, Clock, Brain, Layers, Users, Sliders } from 'lucide-react';
 
 const OrosiuriSystemSection = () => {
-  const container = useRef();
+  const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end end"]
