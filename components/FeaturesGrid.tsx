@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import Image from "next/image"; // Import the Image component from Next.js
+import { JSX } from "react/jsx-runtime";
 
 interface PricingCard {
   id: number;
