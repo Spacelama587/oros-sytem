@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, MotionValue } from 'framer-motion'; // Import MotionValue
 import Lenis from 'lenis';
 import { TrendingUp, Clock, Brain, Layers, Users, Sliders } from 'lucide-react';
 
@@ -16,7 +16,7 @@ const OrosiuriSystemSection = () => {
   useEffect(() => {
     const lenis = new Lenis();
     
-    function raf(time) {
+    function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
@@ -36,7 +36,12 @@ const OrosiuriSystemSection = () => {
   );
 };
 
-const SectionTitle = ({ scrollYProgress }) => {
+// Define the type for the props
+interface SectionTitleProps {
+  scrollYProgress: MotionValue<number>;
+}
+
+const SectionTitle = ({ scrollYProgress }: SectionTitleProps) => {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
@@ -88,7 +93,12 @@ const SectionTitle = ({ scrollYProgress }) => {
   );
 };
 
-const SectionFeatures = ({ scrollYProgress }) => {
+// Define the type for the props
+interface SectionFeaturesProps {
+  scrollYProgress: MotionValue<number>;
+}
+
+const SectionFeatures = ({ scrollYProgress }: SectionFeaturesProps) => {
   const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const rotate = useTransform(scrollYProgress, [0, 1], [5, 0]);
   const opacity = useTransform(scrollYProgress, [0.3, 0.6], [0, 1]);
@@ -141,7 +151,7 @@ const SectionFeatures = ({ scrollYProgress }) => {
   return (
     <motion.div 
       style={{ scale, rotate, opacity }}
-      className="relative  bg-gradient-to-b from-black to-slate-900 flex items-center"
+      className="relative bg-gradient-to-b from-black to-slate-900 flex items-center"
     >
       <div className="max-w-7xl mx-auto px-4 py-16 w-full">
         <div className="grid grid-cols-12 gap-6">
