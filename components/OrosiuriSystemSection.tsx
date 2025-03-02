@@ -151,7 +151,7 @@ const SectionFeatures = ({ scrollYProgress }: SectionFeaturesProps) => {
   return (
     <motion.div 
       style={{ scale, rotate, opacity }}
-      className="relative bg-gradient-to-b from-black to-slate-900 flex items-center"
+      className="relative bg-gradient-to-b from-bg-zinc-950 to-slate-900 flex items-center"
     >
       <div className="max-w-7xl mx-auto px-4 py-16 w-full">
         <div className="grid grid-cols-12 gap-6">

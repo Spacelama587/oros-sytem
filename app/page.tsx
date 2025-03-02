@@ -6,7 +6,7 @@ import VideoSection from '@/components/VideoSection';
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-8 bg-zinc-950">
+    <main className="min-h-screen  bg-zinc-950">
      
       <Navbar />
       <ModernHero />
